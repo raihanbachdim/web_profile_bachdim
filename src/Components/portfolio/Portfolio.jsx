@@ -48,6 +48,8 @@ export default function Portfolio() {
             case "content":
                 setData(contentPortfolio)
                 break;
+            default :
+                break;
         }
     },[selected])
 
