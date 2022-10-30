@@ -1,0 +1,27 @@
+.App{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: lightcoral;
+        // untuk mengatur content agar tidak tertimpa navbar
+        position: relative;
+        top: 70px;
+        // scroll snap
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none; //for firefox
+        // menghilangkan scroll bar
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        // Untuk mengatur lebar dan tinggi di dalam sections 
+        // Gunakan cara ini lebih mudah agar tidak usah mengatur lagi secara 1 per 1
+        > * {
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
